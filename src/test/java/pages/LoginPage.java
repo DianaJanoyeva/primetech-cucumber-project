@@ -7,24 +7,27 @@ import utilities.Driver;
 
 public class LoginPage {
 
+    //Constructor for the page
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
-    @FindBy(xpath = "")
+    //************** ELEMENTS *******************
+
+    @FindBy(xpath = "//input[@name='email']")
     WebElement emailInput;
 
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@name='password']")
     WebElement passwordInput;
 
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//button[text()='Login' and @type='submit']")
     WebElement loginButton;
 
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//p[text()='These credentials do not match our records.']")
     WebElement loginErrorMessageLabel;
 
 
