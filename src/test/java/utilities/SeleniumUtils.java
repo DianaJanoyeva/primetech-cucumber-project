@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,5 +31,16 @@ public class SeleniumUtils {
         Actions actions = new Actions(driver);
         actions.dragAndDrop(elementStart, elementTarget).build().perform();
     }
+
+    public static void sendKeysUsingJavaScriptExecutor(String inputString, WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].setAttribute('value', '" + inputString +"')", element);
+    }
+
+    public static void sendkeysWithActionsClass(WebElement element,String input){
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(element,input).build().perform();
+    }
+
 }
 

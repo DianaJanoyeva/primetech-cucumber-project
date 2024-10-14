@@ -16,19 +16,19 @@ public class LoginPage {
     //************** ELEMENTS *******************
 
     @FindBy(xpath = "//input[@name='email']")
-    WebElement emailInput;
+    public WebElement emailInput;
 
 
     @FindBy(xpath = "//input[@name='password']")
-    WebElement passwordInput;
+    public WebElement passwordInput;
 
 
     @FindBy(xpath = "//button[text()='Login' and @type='submit']")
-    WebElement loginButton;
+    public WebElement loginButton;
 
 
     @FindBy(xpath = "//p[text()='These credentials do not match our records.']")
-    WebElement loginErrorMessageLabel;
+    public WebElement loginErrorMessageLabel;
 
 
 }
